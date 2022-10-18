@@ -77,7 +77,7 @@ class OffboardControl(Node):
         # TODO: handle NED->ENU transformation
         print("NAV_STATUS: ", msg.nav_state)
         print("  - offboard status: ", VehicleStatus.NAVIGATION_STATE_OFFBOARD)
-        self.nav_state = msg.nav_state
+        self.nav_state = msg.nav_state_user_intention
 
     def cmdloop_callback(self):
         # Publish offboard control modes
